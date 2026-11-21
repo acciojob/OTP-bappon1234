@@ -1,11 +1,11 @@
 const codes = document.querySelectorAll('.code');
 
 if (codes.length > 0) {
-  codes.focus();
+  codes[0].focus();
 }
 
 codes.forEach((code, idx) => {
-  // 1. Typing forward (handles both real typing and automated .type() / input events)
+  // 1. Typing forward
   code.addEventListener('input', (e) => {
     const val = e.target.value;
     if (val.length > 1) {
